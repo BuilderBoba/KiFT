@@ -53,7 +53,9 @@ function App() {
         var metamaskProvider = window.ethereum;
         console.log("메타마스크만 다운되어있는 것 처리===>", metamaskProvider);
       } else {
-        var metamaskProvider = window.ethereum.providers.find((provider) => provider.isMetaMask);
+        var metamaskProvider = window.ethereum.providers.find(
+          (provider) => provider.isMetaMask
+        );
         console.log("여러개 지갑 처리 ==>", metamaskProvider);
       }
       console.log("ethereum provider=====>>>>", metamaskProvider);
@@ -71,14 +73,16 @@ function App() {
 
             const headers = {
               "Content-Type": "application/x-www-form-urlencoded",
-              Accept: "*/*",
+              Accept: "*/*"
             };
             const params = new URLSearchParams();
             params.append("loginAddress", account[0].toLowerCase());
 
-            await axios.post("http://localhost:3001/sign", params, { headers }).then((res) => {
-              console.log(res);
-            });
+            await axios
+              .post("http://localhost:3001/sign", params, { headers })
+              .then((res) => {
+                console.log(res);
+              });
           }
         });
       } catch (err) {
@@ -101,11 +105,23 @@ function App() {
         <Route path="/market" element={<Market setfooter={setfooter} />} />
         {/* 로그인 시 마켓으로 이동하게 해놨음! 다른 곳으로 원하면
                 바꿔도 됨*/}
-        <Route path='/curated' element={<Curated/>}/>
-        <Route path="/signin" element={<SignIn setfooter={setfooter} setIsLogin={setIsLogin} setLoginAccount={setLoginAccount} />} />
+        <Route path="/curated" element={<Curated />} />
+        <Route
+          path="/signin"
+          element={
+            <SignIn
+              setfooter={setfooter}
+              setIsLogin={setIsLogin}
+              setLoginAccount={setLoginAccount}
+            />
+          }
+        />
         <Route path="/mypage" element={<Mypage setIsLogin={setIsLogin} />} />
-        <Route path="mypage/:id" element={<About loginAccount={loginAccount} />} />
-        <Route path="/claim" element={<Claim />} />
+        <Route
+          path="mypage/:id"
+          element={<About loginAccount={loginAccount} />}
+        />
+        <Route path="/claim" element={<Claim isLogin={isLogin} />} />
         <Route path="/create" element={<CreateNft />} />
         <Route path=":id" element={<NotFound />} />
       </Routes>
