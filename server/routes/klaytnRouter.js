@@ -15,17 +15,6 @@ const chainId = 1001;
 const caver = new CaverExtKAS();
 caver.initKASAPI(chainId, accessKeyId, secretAccessKey);
 
-<<<<<<< HEAD
-const contractAddress = "0x1ac133cd73dd754e51dd40102ed3ea7e786f83f2";
-const ownerAddress = "0xd23cd63b84e294b304548b9758f647ceb7724241";
-const query = {
-  size: 100,
-};
-const result = caver.kas.tokenHistory.getNFTListByOwner(contractAddress, ownerAddress, query);
-result.then(console.log);
-
-=======
->>>>>>> 53b93a34cc07ae70beb2b7aba26ad6fe4b5ca838
 router.get("/", function (req, res) {
   res.status(200).send("welcome");
 });
@@ -86,13 +75,8 @@ router.post("/fetchNFT", async (req, res) => {
             ).then((result) => {
               console.log("tesult@@@", result);
               console.log(result._id);
-<<<<<<< HEAD
-              User.findOneAndUpdate({ ownerAddress: reqOwnerAddress }, { $addToSet: { ownedNFTs: result._id } }).then((result) => {
-                console.log(result);
-=======
               User.findOneAndUpdate({ address: reqOwnerAddress }, { $addToSet: { ownedNFTs: result._id } }).then((result) => {
                 console.log("tsult!@#@!##", result);
->>>>>>> 53b93a34cc07ae70beb2b7aba26ad6fe4b5ca838
               });
             });
           });
