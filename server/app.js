@@ -26,7 +26,7 @@ var indexRouter = require("./routes/index");
 const klaytnRouter = require("./routes/klaytnRouter");
 
 var app = express();
-const port = 3001;
+const port = 80;
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
