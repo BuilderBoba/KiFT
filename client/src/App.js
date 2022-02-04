@@ -50,7 +50,7 @@ function App() {
               params.append("address", account[0].toLowerCase());
 
               await axios
-                .post("http://3.37.89.170:3001/klaytn/sign", params, {
+                .post("http://localhost:3001/klaytn/sign", params, {
                   headers,
                 })
                 .then((result) => {
@@ -99,7 +99,7 @@ function App() {
                     params.append("loginAddress", account[0].toLowerCase());
 
                     await axios
-                      .post("http://3.37.89.170:3001/sign", params, {
+                      .post("http://localhost:3001/sign", params, {
                         headers,
                       })
                       .then((res) => {
@@ -151,7 +151,7 @@ function App() {
                 const params = new URLSearchParams();
                 params.append("loginAddress", account[0].toLowerCase());
 
-                await axios.post("http://3.37.89.170:3001/sign", params, { headers }).then((res) => {
+                await axios.post("http://localhost:3001/sign", params, { headers }).then((res) => {
                   console.log(res);
                 });
               }

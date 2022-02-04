@@ -36,7 +36,7 @@ function Claim(isLogin) {
         setAccount(accounts[0].toLowerCase());
         web.eth.getAccounts().then(async (account) => {
           await axios
-            .post("http://3.37.89.170:3001/findUser", {
+            .post("http://localhost:3001/findUser", {
               address: account[0].toLowerCase(),
             })
             .then((result) => {
@@ -88,7 +88,7 @@ function Claim(isLogin) {
         web.eth.getAccounts().then(async (account) => {
           //계정 조회후 포인트 받아옴
           await axios
-            .post("http://3.37.89.170:3001/findUser", {
+            .post("http://localhost:3001/findUser", {
               address: account[0].toLowerCase(),
             })
             .then((result) => {
@@ -113,7 +113,7 @@ function Claim(isLogin) {
                     if (receipt.blockHash) {
                       //민트 성공하면 디비 초기화 !!
                       await axios
-                        .post("http://3.37.89.170:3001/initializePoints", {
+                        .post("http://localhost:3001/initializePoints", {
                           address: account[0].toLowerCase(),
                         })
                         .then((result) => {

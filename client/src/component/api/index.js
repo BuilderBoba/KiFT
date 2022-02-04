@@ -8,7 +8,7 @@ const api = {
         Accept: "aaplication/json",
       };
 
-      const result = await axios.post("http:3.37.89.170:3001/toGiveContributePoint", {
+      const result = await axios.post("http:localhost:3001/toGiveContributePoint", {
         account: account,
         point: point,
         headers,

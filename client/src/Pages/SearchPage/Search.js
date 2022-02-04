@@ -40,7 +40,7 @@ function Search() {
 
   async function fetchItem(searchQuery) {
     await axios
-      .post("http://3.37.89.170:3001/searchItems", {
+      .post("http://localhost:3001/searchItems", {
         nameOfItem: searchQuery,
       })
       .then((result) => {

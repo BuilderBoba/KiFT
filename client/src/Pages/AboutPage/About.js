@@ -150,7 +150,7 @@ function About({ loginAccount, isKaikas /* 로그인된 계정 */ }) {
     //데이터베이스에서 NFT 조회 후 받아온 정보로 페이지 구성
     await axios
       .post(
-        "http://3.37.89.170:3001/searchNFT",
+        "http://localhost:3001/searchNFT",
         {
           openseaId: URLparam,
         },
@@ -175,7 +175,7 @@ function About({ loginAccount, isKaikas /* 로그인된 계정 */ }) {
     //데이터베이스에서 NFT 조회 후 받아온 정보로 페이지 구성
     await axios
       .post(
-        "http://3.37.89.170:3001/klaytn/searchNFT",
+        "http://localhost:3001/klaytn/searchNFT",
         {
           openseaId: URLparam,
         },
@@ -203,7 +203,7 @@ function About({ loginAccount, isKaikas /* 로그인된 계정 */ }) {
 
     await axios
       .post(
-        "http://3.37.89.170:3001/listItemOnlist",
+        "http://localhost:3001/listItemOnlist",
         {
           openseaId: URLparam,
           price: priceSellerPut,
@@ -218,7 +218,7 @@ function About({ loginAccount, isKaikas /* 로그인된 계정 */ }) {
           setMessage("Upload your NFT Success!");
 
           await axios
-            .post("http://3.37.89.170:3001/toGiveContributePoint", {
+            .post("http://localhost:3001/toGiveContributePoint", {
               address: loginAccount,
               point: 1,
             })
@@ -246,7 +246,7 @@ function About({ loginAccount, isKaikas /* 로그인된 계정 */ }) {
     };
     await axios
       .post(
-        "http://3.37.89.170:3001/listItemOnchange",
+        "http://localhost:3001/listItemOnchange",
         {
           openseaId: URLparam,
           price: priceSellerPut,
@@ -274,7 +274,7 @@ function About({ loginAccount, isKaikas /* 로그인된 계정 */ }) {
     };
     await axios
       .post(
-        "http://3.37.89.170:3001/listItemOncancel",
+        "http://localhost:3001/listItemOncancel",
         {
           openseaId: URLparam,
           isSale: false,
@@ -287,7 +287,7 @@ function About({ loginAccount, isKaikas /* 로그인된 계정 */ }) {
         if (result.status === 200) {
           setMessage("Cancle your NFT Item Success!");
           await axios
-            .post("http://3.37.89.170:3001/toGiveContributePoint", {
+            .post("http://localhost:3001/toGiveContributePoint", {
               address: loginAccount,
               point: 1,
             })
@@ -541,7 +541,7 @@ function About({ loginAccount, isKaikas /* 로그인된 계정 */ }) {
             console.log("Before changeownerandownedNFTS ==========================");
 
             await axios
-              .post("http://3.37.89.170:3001/toGiveContributePoint", {
+              .post("http://localhost:3001/toGiveContributePoint", {
                 address: loginAccount,
                 secondAddress: ownerAddress,
                 point: 10,
@@ -576,7 +576,7 @@ function About({ loginAccount, isKaikas /* 로그인된 계정 */ }) {
     };
     await axios
       .post(
-        "http://3.37.89.170:3001/listItemOnbuy",
+        "http://localhost:3001/listItemOnbuy",
         {
           openseaId: URLparam,
           price: 0,
@@ -607,7 +607,7 @@ function About({ loginAccount, isKaikas /* 로그인된 계정 */ }) {
     };
     await axios
       .post(
-        "http://3.37.89.170:3001/changeOwnerAndOwnedNFTs",
+        "http://localhost:3001/changeOwnerAndOwnedNFTs",
         {
           address: loginAccount,
           openseaId: sellitem.openseaId,
