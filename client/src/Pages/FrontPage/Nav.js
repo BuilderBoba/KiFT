@@ -23,6 +23,11 @@ function Nav({ isLogin, isKaikas }) {
               </Link>
             </Dropdown.Item>
             <Dropdown.Item>
+              <Link to="/claimforklaytn" className="noneDeco">
+                Claim KiFToken (Klay)
+              </Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
               <Link to="create" className="noneDeco">
                 Create NFT
               </Link>

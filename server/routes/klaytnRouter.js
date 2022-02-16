@@ -227,7 +227,7 @@ router.post("/sign", async (req, res) => {
         user.save();
         res.status(200).send("새로운 계정 DB 생성");
       } else {
-        res.status(408).send("기존 계정 DB 존재");
+        res.status(208).send("기존 계정 DB 존재");
       }
     })
     .catch((err) => {

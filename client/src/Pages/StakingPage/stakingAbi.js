@@ -1,5 +1,29 @@
 const stakingAbi = [
   {
+    constant: false,
+    inputs: [],
+    name: "getReward",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    constant: false,
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_amount",
+        type: "uint256",
+      },
+    ],
+    name: "stake",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
     inputs: [
       {
         internalType: "address",
@@ -15,6 +39,21 @@ const stakingAbi = [
     payable: false,
     stateMutability: "nonpayable",
     type: "constructor",
+  },
+  {
+    constant: false,
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_amount",
+        type: "uint256",
+      },
+    ],
+    name: "withdraw",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function",
   },
   {
     constant: true,
@@ -35,15 +74,6 @@ const stakingAbi = [
     ],
     payable: false,
     stateMutability: "view",
-    type: "function",
-  },
-  {
-    constant: false,
-    inputs: [],
-    name: "getReward",
-    outputs: [],
-    payable: false,
-    stateMutability: "nonpayable",
     type: "function",
   },
   {
@@ -143,21 +173,6 @@ const stakingAbi = [
     type: "function",
   },
   {
-    constant: false,
-    inputs: [
-      {
-        internalType: "uint256",
-        name: "_amount",
-        type: "uint256",
-      },
-    ],
-    name: "stake",
-    outputs: [],
-    payable: false,
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     constant: true,
     inputs: [],
     name: "stakingToken",
@@ -227,21 +242,6 @@ const stakingAbi = [
     ],
     payable: false,
     stateMutability: "view",
-    type: "function",
-  },
-  {
-    constant: false,
-    inputs: [
-      {
-        internalType: "uint256",
-        name: "_amount",
-        type: "uint256",
-      },
-    ],
-    name: "withdraw",
-    outputs: [],
-    payable: false,
-    stateMutability: "nonpayable",
     type: "function",
   },
 ];
