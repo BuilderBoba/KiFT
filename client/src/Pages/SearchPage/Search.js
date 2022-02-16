@@ -40,7 +40,7 @@ function Search() {
 
   async function fetchItem(searchQuery) {
     await axios
-      .post("http://localhost:3001/searchItems", {
+      .post("https://thekift.shop/searchItems", {
         nameOfItem: searchQuery,
       })
       .then((result) => {

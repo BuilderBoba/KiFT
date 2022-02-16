@@ -50,7 +50,7 @@ function ClaimForKlaytn(isLogin) {
                   try {
                     setAccount(account[0].toLowerCase());
                     await axios
-                      .post("http://localhost:3001/findUser", {
+                      .post("https://thekift.shop/findUser", {
                         address: account[0].toLowerCase(),
                       })
                       .then(async (result) => {
@@ -98,7 +98,7 @@ function ClaimForKlaytn(isLogin) {
     try {
       caver.klay.getAccounts().then(async (account) => {
         await axios
-          .post("http://localhost:3001/findUser", {
+          .post("https://thekift.shop/findUser", {
             address: account[0].toLowerCase(),
           })
           .then((result) => {
@@ -118,7 +118,7 @@ function ClaimForKlaytn(isLogin) {
                 .then(async (receipt) => {
                   if (receipt.blockHash) {
                     await axios
-                      .post("http://localhost:3001/initializePoints", {
+                      .post("https://thekift.shop/initializePoints", {
                         address: account[0].toLowerCase(),
                       })
                       .then((result) => {
