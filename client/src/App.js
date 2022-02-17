@@ -60,7 +60,7 @@ function App() {
                 const params = new URLSearchParams();
                 params.append("address", account[0].toLowerCase());
                 await axios
-                  .post("http://localhost:3001/klaytn/sign", params, {
+                  .post("https://thekift.shop/klaytn/sign", params, {
                     headers,
                   })
                   .then((result) => {
@@ -103,7 +103,7 @@ function App() {
                       const params = new URLSearchParams();
                       params.append("loginAddress", account[0].toLowerCase());
                       await axios
-                        .post("http://localhost:3001/sign", params, {
+                        .post("https://thekift.shop/sign", params, {
                           headers,
                         })
                         .then((res) => {
@@ -151,7 +151,7 @@ function App() {
                   };
                   const params = new URLSearchParams();
                   params.append("loginAddress", account[0].toLowerCase());
-                  await axios.post("http://localhost:3001/sign", params, { headers }).then((res) => {
+                  await axios.post("https://thekift.shop/sign", params, { headers }).then((res) => {
                     console.log(res);
                   });
                 }
@@ -184,7 +184,7 @@ function App() {
                 const params = new URLSearchParams();
                 params.append("address", account[0].toLowerCase());
                 await axios
-                  .post("http://localhost:3001/klaytn/sign", params, {
+                  .post("https://thekift.shop/klaytn/sign", params, {
                     headers,
                   })
                   .then((result) => {
@@ -232,7 +232,7 @@ function App() {
             const params = new URLSearchParams();
             params.append("loginAddress", account[0].toLowerCase());
             await axios
-              .post("http://localhost:3001/sign", params, {
+              .post("https://thekift.shop/sign", params, {
                 headers,
               })
               .then((res) => {

@@ -36,7 +36,7 @@ function SignIn({ setfooter, setLoginAccount, setIsLogin, setIsKaikas, isKaikas 
         const params = new URLSearchParams();
         params.append("loginAddress", accounts[0].toLowerCase());
 
-        await axios.post("http://localhost:3001/sign", params, { headers }).then((res) => {
+        await axios.post("https://thekift.shop/sign", params, { headers }).then((res) => {
           console.log(res);
         });
 
@@ -75,7 +75,7 @@ function SignIn({ setfooter, setLoginAccount, setIsLogin, setIsKaikas, isKaikas 
         params.append("loginAddress", account[0].toLowerCase());
         params.append("Chain", "baobab");
 
-        await axios.post("http://localhost:3001/sign", params, { headers }).then((res) => {
+        await axios.post("https://thekift.shop/sign", params, { headers }).then((res) => {
           document.location.href = "/";
         });
       });

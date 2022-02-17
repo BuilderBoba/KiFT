@@ -186,7 +186,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
     //데이터베이스에서 NFT 조회 후 받아온 정보로 페이지 구성
     await axios
       .post(
-        "http://localhost:3001/searchNFT",
+        "https://thekift.shop/searchNFT",
         {
           openseaId: URLparam,
         },
@@ -211,7 +211,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
     //데이터베이스에서 NFT 조회 후 받아온 정보로 페이지 구성
     await axios
       .post(
-        "http://localhost:3001/klaytn/searchNFT",
+        "https://thekift.shop/klaytn/searchNFT",
         {
           openseaId: URLparam,
         },
@@ -240,7 +240,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
 
       await axios
         .post(
-          "http://localhost:3001/listItemOnlist",
+          "https://thekift.shop/listItemOnlist",
           {
             openseaId: URLparam,
             price: priceSellerPut,
@@ -255,7 +255,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
             setMessage("Upload your NFT Success!");
 
             await axios
-              .post("http://localhost:3001/toGiveContributePoint", {
+              .post("https://thekift.shop/toGiveContributePoint", {
                 address: loginAccount,
                 point: 1,
               })
@@ -281,7 +281,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
 
       await axios
         .post(
-          "http://localhost:3001/klaytn/listItemOnlist",
+          "https://thekift.shop/klaytn/listItemOnlist",
           {
             openseaId: URLparam,
             price: priceSellerPut,
@@ -296,7 +296,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
             setMessage("Upload your NFT Success!");
 
             await axios
-              .post("http://localhost:3001/toGiveContributePoint", {
+              .post("https://thekift.shop/toGiveContributePoint", {
                 address: loginAccount,
                 point: 1,
               })
@@ -655,7 +655,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
       };
       await axios
         .post(
-          "http://localhost:3001/listItemOnchange",
+          "https://thekift.shop/listItemOnchange",
           {
             openseaId: URLparam,
             price: priceSellerPut,
@@ -680,7 +680,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
       };
       await axios
         .post(
-          "http://localhost:3001/klaytn/listItemOnchange",
+          "https://thekift.shop/klaytn/listItemOnchange",
           {
             openseaId: URLparam,
             price: priceSellerPut,
@@ -796,7 +796,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
       };
       await axios
         .post(
-          "http://localhost:3001/listItemOncancel",
+          "https://thekift.shop/listItemOncancel",
           {
             openseaId: URLparam,
             isSale: false,
@@ -809,7 +809,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
           if (result.status === 200) {
             setMessage("Cancle your NFT Item Success!");
             await axios
-              .post("http://localhost:3001/toGiveContributePoint", {
+              .post("https://thekift.shop/toGiveContributePoint", {
                 address: loginAccount,
                 point: 1,
               })
@@ -834,7 +834,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
       };
       await axios
         .post(
-          "http://localhost:3001/klaytn/listItemOncancel",
+          "https://thekift.shop/klaytn/listItemOncancel",
           {
             openseaId: URLparam,
             isSale: false,
@@ -847,7 +847,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
           if (result.status === 200) {
             setMessage("Cancle your NFT Item Success!");
             await axios
-              .post("http://localhost:3001/toGiveContributePoint", {
+              .post("https://thekift.shop/toGiveContributePoint", {
                 address: loginAccount,
                 point: 1,
               })
@@ -901,7 +901,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
               console.log("is there ownerAddress found???? =====>>>>>>", ownerAddress);
               console.log("Before changeownerandownedNFTS ==========================");
               await axios
-                .post("http://localhost:3001/toGiveContributePoint", {
+                .post("https://thekift.shop/toGiveContributePoint", {
                   address: loginAccount,
                   secondAddress: ownerAddress,
                   point: 10,
@@ -950,7 +950,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
                       console.log("is there ownerAddress found???? =====>>>>>>", ownerAddress);
                       console.log("Before changeownerandownedNFTS ==========================");
                       await axios
-                        .post("http://localhost:3001/toGiveContributePoint", {
+                        .post("https://thekift.shop/toGiveContributePoint", {
                           address: loginAccount,
                           secondAddress: ownerAddress,
                           point: 10,
@@ -996,7 +996,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
       };
       await axios
         .post(
-          "http://localhost:3001/listItemOnbuy",
+          "https://thekift.shop/listItemOnbuy",
           {
             openseaId: URLparam,
             price: 0,
@@ -1025,7 +1025,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
       };
       await axios
         .post(
-          "http://localhost:3001/klaytn/listItemOnbuy",
+          "https://thekift.shop/klaytn/listItemOnbuy",
           {
             openseaId: URLparam,
             price: 0,
@@ -1059,7 +1059,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
       };
       await axios
         .post(
-          "http://localhost:3001/changeOwnerAndOwnedNFTs",
+          "https://thekift.shop/changeOwnerAndOwnedNFTs",
           {
             address: loginAccount,
             openseaId: sellitem.openseaId,
@@ -1080,7 +1080,7 @@ function About({ loginAccount /* 로그인된 계정 */ }) {
       };
       await axios
         .post(
-          "http://localhost:3001/klaytn/changeOwnerAndOwnedNFTs",
+          "https://thekift.shop/klaytn/changeOwnerAndOwnedNFTs",
           {
             address: loginAccount,
             openseaId: sellitem.openseaId,
