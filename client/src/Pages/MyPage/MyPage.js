@@ -38,7 +38,7 @@ function MyPage({ setIsLogin, isKaikas, setIsKaikas }) {
     };
     await axios
       .post(
-        "http://localhost:3001/klaytn/crolling",
+        "https://thekift.shop/klaytn/crolling",
         {
           account: account,
         },
@@ -88,7 +88,7 @@ function MyPage({ setIsLogin, isKaikas, setIsKaikas }) {
           };
           await axios
             .post(
-              "http://localhost:3001/findUser",
+              "https://thekift.shop/findUser",
               {
                 address: account[0].toLowerCase(),
               },
@@ -109,7 +109,7 @@ function MyPage({ setIsLogin, isKaikas, setIsKaikas }) {
                 };
                 await axios
                   .post(
-                    "http://localhost:3001/NFT",
+                    "https://thekift.shop/NFT",
                     {
                       owner: data._id,
                       name: item.name,
@@ -259,7 +259,7 @@ function MyPage({ setIsLogin, isKaikas, setIsKaikas }) {
       };
       await axios
         .post(
-          "http://localhost:3001/listItemOntransfer",
+          "https://thekift.shop/listItemOntransfer",
           {
             openseaId: item.id,
             to: to,
@@ -283,7 +283,7 @@ function MyPage({ setIsLogin, isKaikas, setIsKaikas }) {
       };
       await axios
         .post(
-          "http://localhost:3001/klaytn/listItemOntransfer",
+          "https://thekift.shop/klaytn/listItemOntransfer",
           {
             openseaId: item.openseaId,
             to: to,
@@ -311,7 +311,7 @@ function MyPage({ setIsLogin, isKaikas, setIsKaikas }) {
       };
       await axios
         .post(
-          "http://localhost:3001/changeOwnerAndOwnedNFTs",
+          "https://thekift.shop/changeOwnerAndOwnedNFTs",
           {
             address: transTo.toLowerCase(),
             openseaId: item.id,
@@ -335,7 +335,7 @@ function MyPage({ setIsLogin, isKaikas, setIsKaikas }) {
       };
       await axios
         .post(
-          "http://localhost:3001/klaytn/changeOwnerAndOwnedNFTs",
+          "https://thekift.shop/klaytn/changeOwnerAndOwnedNFTs",
           {
             address: transTo.toLowerCase(),
             openseaId: item.openseaId,
@@ -371,7 +371,7 @@ function MyPage({ setIsLogin, isKaikas, setIsKaikas }) {
                       "Content-Type": "application/json",
                       Accept: "application/json",
                     };
-                    await axios.post("http://localhost:3001/regdate", { address: account[0].toLowerCase() }, headers).then(async (result) => {
+                    await axios.post("https://thekift.shop/regdate", { address: account[0].toLowerCase() }, headers).then(async (result) => {
                       await setRegdate(result.data.createdAt.slice(0, 10));
                       await setData([]);
                     });
@@ -383,7 +383,7 @@ function MyPage({ setIsLogin, isKaikas, setIsKaikas }) {
                         Accept: "application/json",
                       };
                       await axios
-                        .post("http://localhost:3001/klaytn/fetchNFT", { ownerAddress: account[0].toLowerCase(), thisContract: contract }, headers)
+                        .post("https://thekift.shop/klaytn/fetchNFT", { ownerAddress: account[0].toLowerCase(), thisContract: contract }, headers)
                         .then(async (result) => {
                           console.log("result??", result);
                           await setRegdate(result.data.result.createdAt.slice(0, 10));
