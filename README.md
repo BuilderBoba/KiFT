@@ -2,7 +2,7 @@
 ![LOGO](https://codestates.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff8d283a8-9024-46c1-b8b9-d02add9a5152%2FScreen_Shot_2022-01-28_at_11.25.47_AM.png?table=block&id=8606192e-26a5-4375-9b9a-9aab3931fdc2&spaceId=82d63a72-8254-4cde-bf1e-b2597b7c099c&width=2000&userId=&cache=v2)
 KiFT는 디지털 NFT 마켓플레이스와 더불어 예술 큐레이션 및 인센티브 기반 토큰 배포 기능이 추가된 디지털 통합 환경입니다. 또한 사용자들은 NFT를 직접 만들어서 배포할 수 있는 기능도 포함되어 있습니다. 자신이 원하는 NFT를 사고 팔고, 그 활동의 대가로 커뮤니티 고유 토큰인 KFT 토큰을 받을 수 있는 환경입니다. 토큰을 통해 스테이킹과 가치창출 그리고 토큰 이코노미에 참여 할 수 있습니다.
 
-### 세부 기능 (02-01 이후 추가된 기능 제외)
+### 세부 기능
 1. 카이카스 및 메타마스크로 로그인 및 모든 서명 
 2. 마이페이지에서 현재 address가 보유한 NFT 아이템 모두 출력
 3. 보유중인 NFT 아이템 중 다른 address로 전송(트랜스퍼) 기능
@@ -26,10 +26,10 @@ KiFT는 디지털 NFT 마켓플레이스와 더불어 예술 큐레이션 및 �
 5. Claim, Staking 페이지는 Baobab환경과 KIP-7의 KFT토큰을 사용합니다.
 6. Nav.js 컴포넌트에서 Rinkeby환경과 ERC-20의 KFT토큰도 Claim, Staking 페이지 사용을 위해 주석처리되어있고 관련 컴포넌트와 로직이 작성되어있습니다. 
 7. Staking은 별도의 예치시간이나 이자율 등이 계산되진 않았습니다.
+8. DAO는 구현 중에 있으며 클릭시 메인화면으로 이동합니다.
 
 ### 주의사항
 - 클라이언트 .env파일내에 관련 컨트랙트 주소가 정확히 기입되어야합니다.
-- 서버 .env파일내에서 INFURA_API_KEY를 확인하여야 합니다.
 - 현재 클라이언트에서 사용되는 AXIOS 통신 주소는 우리가 AWS에 배포한 서버를 사용하고 있습니다.
 - 배포한 클라이언트와 서버가 Https 통신을 전제로 작성되어있습니다.
 - npm install 오류시 캐시를 지우고 package-lock.json과 node_modules 디렉토리를 삭제 후 다시 install 해야합니다.
