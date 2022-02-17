@@ -76,7 +76,7 @@ function MyPage({ setIsLogin, isKaikas, setIsKaikas }) {
         return account;
       })
       .then(async (account) => {
-        await axios.get(`https://testnets-api.opensea.io/assets?owner=${account}`).then(async (result) => {
+        await axios.get(`https://testnets-api.opensea.io/api/v1/assets?owner=${account}`).then(async (result) => {
           setData(result.data.assets);
           console.log("account setting succssed!!!!!");
           setNowAccount(account);
