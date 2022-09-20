@@ -1,6 +1,6 @@
-# KiFT : Community-Curated NFT MarketPlace
 ![LOGO](https://gateway.pinata.cloud/ipfs/QmRwXds4eSWDiKXYsk2gaFMoyXYP1VQcHRK3P6CNbzSeFw)
-KiFT는 디지털 NFT 마켓플레이스와 더불어 예술 큐레이션 및 인센티브 기반 토큰 배포 기능이 추가된 디지털 통합 환경입니다. 또한 사용자들은 NFT를 직접 만들어서 배포할 수 있는 기능도 포함되어 있습니다. 자신이 원하는 NFT를 사고 팔고, 그 활동의 대가로 커뮤니티 고유 토큰인 KFT 토큰을 받을 수 있는 환경입니다. 토큰을 통해 스테이킹과 가치창출 그리고 토큰 이코노미에 참여 할 수 있습니다.
+KiFT is a digital NFT marketplace that integrates art cuation and incentive-based token distribution. It also includes the ability for users to create and deploy their own NFTs. It is an environment where you can buy and sell NFTs you want and receive KFT tokens in return for their activities. Tokens can not only be staked, but also can be used for value creation and participation in the token economy.![image](https://user-images.githubusercontent.com/28004118/191167165-597715ef-5200-4661-b8e4-664a2cc214e6.png)
+
 
 ### 세부 기능
 1. 카이카스 및 메타마스크로 로그인 및 모든 서명 
